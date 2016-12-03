@@ -20,7 +20,8 @@ public class ShowLocation extends AppCompatActivity implements
     private GoogleApiClient mGoogleApiClient;
     double mLatitudeText;
     double mLongitudeText;
-
+    private RotationSensor rotationSensor;
+    private TextView rotationLabel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
@@ -34,6 +35,8 @@ public class ShowLocation extends AppCompatActivity implements
                     .build();
 
         }
+        this.rotationLabel = (TextView) findViewById(R.id.Rotation);
+        this.rotationSensor = new RotationSensor(this, rotationLabel);
     }
 
     protected void onStart() {

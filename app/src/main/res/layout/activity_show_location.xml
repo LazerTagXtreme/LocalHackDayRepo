@@ -39,4 +39,13 @@
         android:layout_alignStart="@+id/Latitude"
         android:layout_marginTop="35dp" />
 
+    <TextView
+        android:text="Rotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Rotation"
+        android:layout_below="@+id/Longitude"
+        android:layout_alignStart="@+id/Longitude"
+        android:layout_marginTop="35dp" />
+
 </RelativeLayout>
