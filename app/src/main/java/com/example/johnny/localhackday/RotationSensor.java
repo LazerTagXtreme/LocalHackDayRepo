@@ -50,8 +50,8 @@ public class RotationSensor implements SensorEventListener{
     }
 
     public boolean isAimedAtPlayer(PointF user, PointF target){
-
-        return true;
+        UnitVector other = new UnitVector(user,target);
+        return this.direction.isEqual(other);
     }
 
 }
