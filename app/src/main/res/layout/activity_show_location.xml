@@ -13,7 +13,8 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/radar_background"/>
+        app:srcCompat="@mipmap/radar_background"
+        android:id="@+id/radar_background"/>
 
     <Button
         android:text="Show Location"
