@@ -36,7 +36,7 @@ public class ShowLocation extends AppCompatActivity implements
 
         }
         this.rotationLabel = (TextView) findViewById(R.id.Rotation);
-        this.rotationSensor = new RotationSensor(this, rotationLabel);
+        this.rotationSensor = new RotationSensor(this, this.rotationLabel);
     }
 
     protected void onStart() {
