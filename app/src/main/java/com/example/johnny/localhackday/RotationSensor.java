@@ -23,6 +23,8 @@ public class RotationSensor implements SensorEventListener{
         this.manager = (SensorManager) this.context.getSystemService(Context.SENSOR_SERVICE);
         this.sensor = manager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
         this.label = label;
+
+        manager.registerListener(this, this.sensor, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     public void onSensorChanged(SensorEvent e){
