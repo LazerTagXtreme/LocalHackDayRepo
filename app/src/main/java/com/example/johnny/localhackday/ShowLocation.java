@@ -39,6 +39,7 @@ public class ShowLocation extends AppCompatActivity implements
     TextView latitude;
     TextView longitude;
     TextView time;
+    TextView overview;
     Button getUpdate;
     boolean mRequestingLocationUpdates;
     Game game;
@@ -51,6 +52,7 @@ public class ShowLocation extends AppCompatActivity implements
         latitude = (TextView) findViewById(R.id.Latitude);
         longitude = (TextView) findViewById(R.id.Longitude);
         time = (TextView) findViewById(R.id.time);
+        overview = (TextView) findViewById(R.id.overview);
 
         mRequestingLocationUpdates = false;
         updateValuesFromBundle(savedInstanceState);
@@ -140,15 +142,6 @@ public class ShowLocation extends AppCompatActivity implements
 
 
     public void GetLocation(View view) {
-        /*
-        latitude = (TextView) findViewById(R.id.Latitude);
-        longitude = (TextView) findViewById(R.id.Longitude);
-        time = (TextView) findViewById(R.id.time);
-        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        if (mLastLocation != null) {
-            updateUI();
-        }
-        createLocationRequest();*/
         if (!mRequestingLocationUpdates) {
             mRequestingLocationUpdates = true;
             if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -165,7 +158,6 @@ public class ShowLocation extends AppCompatActivity implements
             //setButtonsEnabledState();
             startLocationUpdates();
             game = new Game(this, mLastLocation.getLongitude(), mLastLocation.getLatitude() );
-            TextView overview = (TextView) findViewById(R.id.overview);
             overview.setText(game.toString());
         }
         /*if (mRequestingLocationUpdates) {
@@ -188,7 +180,6 @@ public class ShowLocation extends AppCompatActivity implements
         updateUI();
 
         if (game.isRunning()) {
-            TextView overview = (TextView) findViewById(R.id.overview);
             overview.setText(game.gameLoop(mLastLocation.getLongitude(), mLastLocation.getLatitude()));
 
         }
