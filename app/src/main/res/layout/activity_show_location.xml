@@ -11,12 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.johnny.localhackday.ShowLocation">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/radar_background"
-        android:id="@+id/radar_background"/>
-
     <Button
         android:text="Show Location"
         android:layout_width="wrap_content"
@@ -47,12 +41,20 @@
         android:layout_marginTop="35dp" />
 
     <TextView
-        android:text="Rotation"
+        android:text="Time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Rotation"
         android:layout_below="@+id/Longitude"
-        android:layout_alignStart="@+id/Longitude"
-        android:layout_marginTop="35dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:id="@+id/time" />
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Longitude"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:id="@+id/overview" />
 
 </RelativeLayout>
