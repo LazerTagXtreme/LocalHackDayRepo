@@ -24,8 +24,7 @@ public class ShowLocation extends AppCompatActivity implements
     private GoogleApiClient mGoogleApiClient;
     double mLatitudeText;
     double mLongitudeText;
-    private RotationSensor rotationSensor;
-    private TextView rotationLabel;
+    private ImageView ghost_icon, item_icon[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
@@ -39,9 +38,19 @@ public class ShowLocation extends AppCompatActivity implements
                     .build();
 
         }
-        ImageView ghostImage = (ImageView) findViewById(R.id.ghost_radar_icon);
-        View root = ghostImage.getRootView();
-        root.setBackgroundColor(Color.parseColor("#000f08"));
+        this.item_icon = new ImageView[6];
+
+        this.ghost_icon = (ImageView) findViewById(R.id.ghost);
+        this.item_icon[0] = (ImageView) findViewById(R.id.item1);
+        this.item_icon[1] = (ImageView) findViewById(R.id.item2);
+        this.item_icon[2] = (ImageView) findViewById(R.id.item3);
+        this.item_icon[3] = (ImageView) findViewById(R.id.item4);
+        this.item_icon[4] = (ImageView) findViewById(R.id.item5);
+        this.item_icon[5] = (ImageView) findViewById(R.id.item6);
+    }
+
+    public void updateRadar(float[][] loc){
+        
     }
 
     protected void onStart() {
@@ -81,13 +90,13 @@ public class ShowLocation extends AppCompatActivity implements
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        TextView latitude = (TextView) findViewById(R.id.Latitude);
-        TextView longitude = (TextView) findViewById(R.id.Longitude);
+//        TextView latitude = (TextView) findViewById(R.id.Latitude);
+//        TextView longitude = (TextView) findViewById(R.id.Longitude);
         Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        if (mLastLocation != null) {
-            latitude.setText(String.valueOf(mLastLocation.getLatitude()));
-            longitude.setText(String.valueOf(mLastLocation.getLongitude()));
-        }
+//        if (mLastLocation != null) {
+//            latitude.setText(String.valueOf(mLastLocation.getLatitude()));
+//            longitude.setText(String.valueOf(mLastLocation.getLongitude()));
+//        }
     }
 
 }

@@ -9,68 +9,72 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/background"
     tools:context="com.example.johnny.localhackday.ShowLocation">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxHeight="10dp"
-        android:maxWidth="10dp"
-        app:srcCompat="@mipmap/ghost_radar_icon"
-        android:id="@+id/ghost_radar_icon"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxHeight="10dp"
-        android:maxWidth="10dp"
-        app:srcCompat="@mipmap/item_radar_icon"
-        android:id="@+id/item_radar_icon"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxHeight="100dp"
-        android:maxWidth="100dp"
-        app:srcCompat="@mipmap/radar_background"
-        android:id="@+id/radar_background"/>
 
     <Button
         android:text="Show Location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="161dp"
         android:id="@+id/showLocation"
-        android:onClick="GetLocation"/>
+        android:onClick="GetLocation"
+        android:visibility="gone"/>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@mipmap/radar_background"
+        android:id="@+id/radar"
+        android:layout_alignParentStart="true"
+        android:background="@color/transparent"/>
 
-    <TextView
-        android:text="Latitude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="93dp"
-        android:id="@+id/Latitude" />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/ghost_radar_icon"
+        android:id="@+id/ghost"
+        android:visibility="gone"/>
 
-    <TextView
-        android:text="Longitude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Longitude"
-        android:layout_below="@+id/Latitude"
-        android:layout_alignStart="@+id/Latitude"
-        android:layout_marginTop="35dp" />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/item_radar_icon"
+        android:id="@+id/item1"
+        android:visibility="gone"/>
 
-    <TextView
-        android:text="Rotation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Rotation"
-        android:layout_below="@+id/Longitude"
-        android:layout_alignStart="@+id/Longitude"
-        android:layout_marginTop="35dp" />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/item_radar_icon"
+        android:id="@+id/item2"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/item_radar_icon"
+        android:id="@+id/item3"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/item_radar_icon"
+        android:id="@+id/item4"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/item_radar_icon"
+        android:id="@+id/item5"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/item_radar_icon"
+        android:id="@+id/item6"
+        android:visibility="gone"/>
 
 </RelativeLayout>
