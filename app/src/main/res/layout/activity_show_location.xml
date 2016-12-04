@@ -14,6 +14,22 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxHeight="10dp"
+        android:maxWidth="10dp"
+        app:srcCompat="@mipmap/ghost_radar_icon"
+        android:id="@+id/ghost_radar_icon"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="10dp"
+        android:maxWidth="10dp"
+        app:srcCompat="@mipmap/item_radar_icon"
+        android:id="@+id/item_radar_icon"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:maxHeight="100dp"
         android:maxWidth="100dp"
         app:srcCompat="@mipmap/radar_background"

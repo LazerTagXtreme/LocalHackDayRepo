@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.formats.NativeAd;
 import com.google.android.gms.ads.purchase.InAppPurchase;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -38,14 +39,9 @@ public class ShowLocation extends AppCompatActivity implements
                     .build();
 
         }
-        this.rotationLabel = (TextView) findViewById(R.id.Rotation);
-        this.rotationSensor = new RotationSensor(this, this.rotationLabel);
-
-        View root = rotationLabel.getRootView();
+        ImageView ghostImage = (ImageView) findViewById(R.id.ghost_radar_icon);
+        View root = ghostImage.getRootView();
         root.setBackgroundColor(Color.parseColor("#000f08"));
-
-
-
     }
 
     protected void onStart() {
